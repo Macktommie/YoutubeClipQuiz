@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: youtubeclipquiz
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: YOUTUBE_API_KEY
+        sync: false
+      - key: PUBLIC_URL
+        sync: false
